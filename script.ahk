@@ -1,13 +1,13 @@
-RIPA
-URLDownloadToFile, https://raw.githubusercontent.com/kolt04/ahk.scr_kolt04/master/update.txt, update.txt
+DIR = %A_MyDocuments%\GTA San Andreas User Files\AHK kolt04\
+FileCreateDir, %DIR%
+URLDownloadToFile, https://raw.githubusercontent.com/kolt04/ahk.scr_kolt04/master/update.tx, update.txt
 FileRead, ver_one, script_ver.txt
 FileRead, ver_update, update.txt
 if (ver_one < ver_update)
 {
     MsgBox, , AHK, Есть новая версия скрипта! Сейчас загрузим!
-    FileAppend, %A_ScriptDir%, %A_Temp%\AHKDir.txt
-	FileRead, Direct, %A_Temp%\AHKDir.txt
-	URLDownloadToFile, https://raw.githubusercontent.com/Anton00756/AHK/master/Mafia.exe, %Direct%\script.ahk
+	filedelete, script.ahk
+	URLDownloadToFile, https://raw.githubusercontent.com/kolt04/ahk.scr_kolt04/master/script.ahk, %dir%\scr1pt.ahk
 }
 #IfWinActive GTA:SA:MP
 #include UDF.ahk
