@@ -1,6 +1,4 @@
-PIDARAS
-#IfWinActive GTA:SA:MP
-#include UDF.ahk
+RIPA
 URLDownloadToFile, https://raw.githubusercontent.com/kolt04/ahk.scr_kolt04/master/update.txt, update.txt
 FileRead, ver_one, script_ver.txt
 FileRead, ver_update, update.txt
@@ -11,6 +9,8 @@ if (ver_one < ver_update)
 	FileRead, Direct, %A_Temp%\AHKDir.txt
 	URLDownloadToFile, https://raw.githubusercontent.com/Anton00756/AHK/master/Mafia.exe, %Direct%\script.ahk
 }
+#IfWinActive GTA:SA:MP
+#include UDF.ahk
 IniRead, name, config.ini, main, name
 IniRead, number, config.ini, main, number
 IniRead, fraction, config.ini, main, fraction
