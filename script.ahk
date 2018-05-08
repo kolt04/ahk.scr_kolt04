@@ -1,4 +1,5 @@
-﻿#IfWinActive GTA:SA:MP
+PIDARAS
+#IfWinActive GTA:SA:MP
 #include UDF.ahk
 URLDownloadToFile, https://raw.githubusercontent.com/kolt04/ahk.scr_kolt04/master/update.txt, update.txt
 FileRead, ver_one, script_ver.txt
